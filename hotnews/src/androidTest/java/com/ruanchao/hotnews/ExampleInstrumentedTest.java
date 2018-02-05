@@ -1,4 +1,4 @@
-package com.ruanchao.moremodual;
+package com.ruanchao.hotnews;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.ruanchao.moremodual", appContext.getPackageName());
+        assertEquals("com.ruanchao.hotnews", appContext.getPackageName());
     }
 }

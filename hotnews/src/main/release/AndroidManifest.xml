@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ruanchao.hotnews">
+
+    <application>
+
+        <activity android:name=".HotNewsMainActivity"/>
+        <meta-data android:name="com.ruanchao.hotnews.HotNewsApplication" android:value="IModuleConfig"/>
+
+    </application>
+
+</manifest>

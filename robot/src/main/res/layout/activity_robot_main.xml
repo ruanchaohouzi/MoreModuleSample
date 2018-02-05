@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.ruanchao.moremodule.MainActivity">
+    tools:context="com.ruanchao.robot.RobotMainActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -15,15 +14,5 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:id="@+id/btn_botnews"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="打开热点新闻"/>
-    <Button
-        android:id="@+id/btn_robot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="打开机器人"/>
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

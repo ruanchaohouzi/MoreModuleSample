@@ -1,16 +1,15 @@
-apply plugin: 'com.android.application'
-
+apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
+    compileSdkVersion 26
+
+
+
     defaultConfig {
-        applicationId "com.ruanchao.moremodule"
-        multiDexEnabled true
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode rootProject.ext.versionCode
-        versionName rootProject.ext.versionName
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
         //arouter
         javaCompileOptions {
             annotationProcessorOptions {
@@ -18,30 +17,28 @@ android {
             }
         }
         javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
     implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    compile 'com.jakewharton:butterknife:8.8.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     compile rootProject.ext.arouterApi
     compile rootProject.ext.arouterCompiler
     compile rootProject.ext.alibabaFastjson
-    compile project(':common')
-    if(!rootProject.ext.isModuleRun){
-        compile project(':robot')
-        compile project(':hotnews')
-    }
+    compile rootProject.ext.multidex
 }
