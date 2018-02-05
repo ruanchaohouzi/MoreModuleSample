@@ -4,6 +4,8 @@
 
     <application>
 
+        <meta-data android:name="com.ruanchao.robot.RobotApplication" android:value="IModuleConfig"/>
+
         <activity android:name=".RobotMainActivity"/>
 
     </application>
